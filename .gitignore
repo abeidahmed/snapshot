@@ -1,3 +1,4 @@
+# Rails app
 # Ignore bundler config.
 backbone/.bundle
 
@@ -19,3 +20,29 @@ backbone/.byebug_history
 
 # Ignore master key for decrypting credentials and more.
 backbone/config/master.key
+
+# Ember app
+# compiled output
+ember-flesh/dist/
+ember-flesh/tmp/
+
+# dependencies
+ember-flesh/bower_components/
+ember-flesh/node_modules/
+
+# misc
+ember-flesh/.env*
+ember-flesh/.pnp*
+ember-flesh/.sass-cache
+ember-flesh/.eslintcache
+ember-flesh/connect.lock
+ember-flesh/coverage/
+ember-flesh/libpeerconnection.log
+ember-flesh/npm-debug.log*
+ember-flesh/testem.log
+ember-flesh/yarn-error.log
+
+# ember-try
+ember-flesh/.node_modules.ember-try/
+ember-flesh/bower.json.ember-try
+ember-flesh/package.json.ember-try
