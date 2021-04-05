@@ -1,0 +1,21 @@
+# Ignore bundler config.
+backbone/.bundle
+
+# Ignore all logfiles and tempfiles.
+backbone/log/*
+backbone/tmp/*
+backbone!/log/.keep
+backbone!/tmp/.keep
+
+# Ignore pidfiles, but keep the directory.
+backbone/tmp/pids/*
+backbone!/tmp/pids/
+backbone!/tmp/pids/.keep
+
+# Ignore uploaded files in development.
+backbone/storage/*
+backbone!/storage/.keep
+backbone/.byebug_history
+
+# Ignore master key for decrypting credentials and more.
+backbone/config/master.key
