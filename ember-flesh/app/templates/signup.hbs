@@ -1,10 +1,10 @@
-{{page-title "Login"}}
+{{page-title "Signup"}}
 <main class="flex items-center justify-center min-h-screen py-12 bg-gray-50 sm:px-6 lg:px-8">
   <div class="w-full">
     <div class="px-4">
       <img class="w-auto h-6 mx-auto" src="images/logo.svg" alt="Workflow">
       <h2 class="mt-6 text-3xl font-extrabold leading-9 text-center text-gray-900">
-        Sign in to your account
+        Create an account
       </h2>
     </div>
     <div class="w-full sm:max-w-md mx-auto">
@@ -15,29 +15,27 @@
             <input type="email" id="email" required class="block w-full mt-1 text-sm leading-5 shadow-sm form-input rounded-lg border-gray-300">
           </div>
           <div class="mt-4">
-            <div class="flex items-center justify-between">
+            <div class="flex items-center">
               <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
-              <a href="#" class="text-sm text-indigo-600 transition duration-150 ease-in-out hover:text-indigo-500">
-                Forgot password?
-              </a>
+              <p class="text-sm text-gray-600 ml-1">(min. 6 characters)</p>
             </div>
             <input type="password" id="password" required class="block w-full mt-1 text-sm leading-5 shadow-sm form-input rounded-lg border-gray-300">
           </div>
           <div class="mt-4">
             <button type="submit" class="no-focus block w-full px-3 py-2 text-sm font-medium leading-5 text-white whitespace-nowrap bg-indigo-600 border border-transparent rounded-lg hover:bg-indigo-500">
-              Sign in
+              Create an account
             </button>
           </div>
         </form>
         <div class="mt-4">
-          <p class="text-sm text-gray-600">By signing in you agree to our <a href="#" class="font-medium underline transition duration-150 ease-in-out hover:text-gray-500">terms and conditions</a>.</p>
+          <p class="text-sm text-gray-600">By signing up you agree to our <a href="#" class="font-medium underline transition duration-150 ease-in-out hover:text-gray-500">terms and conditions</a>.</p>
         </div>
         <hr class="my-5">
         <div>
-          <h3 class="text-gray-700 text-sm">New to our platform?</h3>
+          <h3 class="text-gray-700 text-sm">Already have an account?</h3>
           <div class="mt-4">
-            <LinkTo @route="signup" class="no-focus block w-full text-center px-3 py-2 text-sm leading-5 font-medium text-gray-700 shadow-sm whitespace-nowrap bg-white border border-gray-300 rounded-lg hover:text-gray-500">
-            Create an account
+            <LinkTo @route="login" class="no-focus block w-full text-center px-3 py-2 text-sm leading-5 font-medium text-gray-700 shadow-sm whitespace-nowrap bg-white border border-gray-300 rounded-lg hover:text-gray-500">
+            Sign in
             </LinkTo>
           </div>
         </div>
