@@ -71,5 +71,7 @@
   "ember": {
     "edition": "octane"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@tailwindcss/forms": "^0.3.2"
+  }
 }
