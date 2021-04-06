@@ -14,6 +14,9 @@ module.exports = function (defaults) {
           require('tailwindcss'),
         ],
       },
+      svgJar: {
+        sourceDirs: ['public/assets/images/icons'],
+      },
     },
   });
 
