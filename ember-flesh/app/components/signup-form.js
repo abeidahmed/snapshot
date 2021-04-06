@@ -5,6 +5,7 @@ import { inject as service } from '@ember/service';
 
 export default class SignupFormComponent extends Component {
   @service store;
+  @service auth;
 
   @tracked email = '';
   @tracked password = '';
@@ -33,7 +34,8 @@ export default class SignupFormComponent extends Component {
     });
 
     try {
-      await user.save();
+      const res = await user.save();
+      this.auth.loginWithToken(res.token);
     } catch (_error) {
       this.errors = user.errors.toArray();
     }
