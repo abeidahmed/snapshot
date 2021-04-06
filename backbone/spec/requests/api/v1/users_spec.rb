@@ -12,7 +12,7 @@ RSpec.describe "Api::V1::Users", type: :request do
       it "sends the user object" do
         post api_v1_users_path, params: { user: { full_name: "John", email: "hey@hey.com", password: "secretpass" } }
 
-        expect(json[:user].keys).to match_array(%i[id full_name email token])
+        expect(json[:user].keys).to match_array(%i[token])
       end
     end
 

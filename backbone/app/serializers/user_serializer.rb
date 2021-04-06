@@ -1,7 +1,11 @@
 class UserSerializer < ApplicationSerializer
-  attributes :id, :full_name, :email, :token
+  attributes :token
 
   def token
-    JsonWebToken.encode({ id: id })
+    JsonWebToken.encode({
+      id: object.id,
+      email: object.email,
+      full_name: object.full_name
+    })
   end
 end

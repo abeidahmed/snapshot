@@ -6,7 +6,7 @@ RSpec.describe "Api::V1::Sessions", type: :request do
       user = create(:user)
       post api_v1_sessions_path, params: { session: { email: user.email, password: user.password } }
 
-      expect(json[:session].keys).to match_array(%i[email full_name id token])
+      expect(json[:session].keys).to match_array(%i[token])
     end
 
     it "throws error if request is invalid" do
