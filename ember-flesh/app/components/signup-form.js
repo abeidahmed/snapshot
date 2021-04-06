@@ -25,6 +25,7 @@ export default class SignupFormComponent extends Component {
 
   @action async createUserRecord(event) {
     event.preventDefault();
+    this.errors = [];
     const user = this.store.createRecord('user', {
       full_name: this.fullName,
       email: this.email,

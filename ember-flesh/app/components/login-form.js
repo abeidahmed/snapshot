@@ -20,6 +20,7 @@ export default class LoginFormComponent extends Component {
 
   @action async loginUser(event) {
     event.preventDefault();
+    this.errors = [];
     const user = this.store.createRecord('session', {
       email: this.email,
       password: this.password,
