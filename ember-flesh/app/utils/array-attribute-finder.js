@@ -1,8 +1,4 @@
-function humanize(string) {
-  const capitalizedString = string.charAt(0).toUpperCase() + string.slice(1);
-
-  return capitalizedString.split('_').join(' ');
-}
+import humanize from './humanize';
 
 export default function arrayAttributeFinder(array, type) {
   if (!array.length) return null;
