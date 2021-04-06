@@ -11,23 +11,19 @@ export default class SignupFormComponent extends Component {
   @tracked fullName = '';
   @tracked errors = [];
 
-  @action
-  updateEmailField(event) {
+  @action updateEmailField(event) {
     this.email = event.target.value;
   }
 
-  @action
-  updatePasswordField(event) {
+  @action updatePasswordField(event) {
     this.password = event.target.value;
   }
 
-  @action
-  updateNameField(event) {
+  @action updateNameField(event) {
     this.fullName = event.target.value;
   }
 
-  @action
-  async createUserRecord(event) {
+  @action async createUserRecord(event) {
     event.preventDefault();
     const user = this.store.createRecord('user', {
       full_name: this.fullName,
