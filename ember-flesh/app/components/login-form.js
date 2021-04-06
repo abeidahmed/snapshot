@@ -29,6 +29,7 @@ export default class LoginFormComponent extends Component {
 
     try {
       const res = await user.save();
+      console.log(res);
       this.auth.loginWithToken(res.token);
     } catch (_error) {
       this.errors = user.errors.toArray();
