@@ -8,9 +8,19 @@ module('Unit | Utility | array-attribute-finder', function () {
         attribute: 'email_address',
         message: 'is invalid',
       },
+      {
+        attribute: 'name',
+        message: 'cannot be blank',
+      },
     ];
 
-    const result = arrayAttributeFinder(errors);
-    assert.equal(result, 'Email address is invalid');
+    const error = arrayAttributeFinder(errors, 'NAME');
+    assert.equal(error, 'Name cannot be blank');
+
+    const error_2 = arrayAttributeFinder(errors, 'email_address');
+    assert.equal(error_2, 'Email address is invalid');
+
+    const error_3 = arrayAttributeFinder([], 'email_address');
+    assert.equal(error_3, null);
   });
 });

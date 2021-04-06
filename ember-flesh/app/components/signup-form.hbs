@@ -6,6 +6,7 @@
   <div class="mt-4">
     <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
     <input type="email" {{on "change" this.updateEmailField}} id="email" required class="block w-full mt-1 text-sm leading-5 shadow-sm form-input rounded-lg border-gray-300">
+    {{show-form-error "email" errors=this.errors}}
   </div>
   <div class="mt-4">
     <div class="flex items-center">

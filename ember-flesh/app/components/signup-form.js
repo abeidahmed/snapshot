@@ -9,6 +9,7 @@ export default class SignupFormComponent extends Component {
   @tracked email = '';
   @tracked password = '';
   @tracked fullName = '';
+  @tracked errors = [];
 
   @action
   updateEmailField(event) {
@@ -37,7 +38,7 @@ export default class SignupFormComponent extends Component {
     try {
       await user.save();
     } catch (_error) {
-      console.log(user.errors.get('email')[0].message);
+      this.errors = user.errors.toArray();
     }
   }
 }

@@ -4,8 +4,12 @@ function humanize(string) {
   return capitalizedString.split('_').join(' ');
 }
 
-export default function arrayAttributeFinder(array) {
-  const attributeName = humanize(array[0].attribute);
+export default function arrayAttributeFinder(array, type) {
+  if (!array.length) return null;
 
-  return `${attributeName} ${array[0].message}`;
+  for (let error of array) {
+    if (error.attribute.toLowerCase() === type.toLowerCase()) {
+      return `${humanize(error.attribute)} ${error.message}`;
+    }
+  }
 }
