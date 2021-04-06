@@ -1,7 +1,7 @@
 class Authentication
   def initialize(params)
-    @email = params.dig(:sessions, :email)
-    @password = params.dig(:sessions, :password)
+    @email = params.dig(:session, :email)
+    @password = params.dig(:session, :password)
   end
 
   def authenticated?
