@@ -1,1 +1,21 @@
-{{yield}}
+<form {{on "submit" this.loginUser}}>
+  <div>
+    <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
+    <input type="email" {{on "change" this.updateEmail}} id="email" required class="block w-full mt-1 text-sm leading-5 shadow-sm form-input rounded-lg border-gray-300">
+  </div>
+  <div class="mt-4">
+    <div class="flex items-center justify-between">
+      <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+      <a href="#" class="text-sm text-indigo-600 transition duration-150 ease-in-out hover:text-indigo-500">
+        Forgot password?
+      </a>
+    </div>
+    <input type="password" {{on "change" this.updatePassword}} id="password" required class="block w-full mt-1 text-sm leading-5 shadow-sm form-input rounded-lg border-gray-300">
+  </div>
+  <p class="text-sm mt-1 text-red-600 font-medium">{{show-form-error "invalid" errors=this.errors}}</p>
+  <div class="mt-4">
+    <button type="submit" class="no-focus block w-full px-3 py-2 text-sm font-medium leading-5 text-white whitespace-nowrap bg-indigo-600 border border-transparent rounded-lg hover:bg-indigo-500">
+      Sign in
+    </button>
+  </div>
+</form>
