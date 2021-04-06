@@ -3,7 +3,7 @@ class Api::V1::SessionsController < ApplicationController
     auth = Authentication.new(params)
 
     if auth.authenticated?
-      render json: auth.user
+      render json: auth.user, serializer: UserSerializer
     else
       render json: { errors: { invalid: ["credentials"] } }, status: :unprocessable_entity
     end
