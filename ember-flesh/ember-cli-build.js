@@ -9,6 +9,9 @@ module.exports = function (defaults) {
         plugins: [
           {
             module: require('postcss-import'),
+            options: {
+              path: ['node_modules'],
+            },
           },
           require('autoprefixer'),
           require('tailwindcss'),
