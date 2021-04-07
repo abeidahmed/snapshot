@@ -1,0 +1,13 @@
+{{#if @status}}
+  <ModalDialog @translucentOverlay={{true}} @onClose={{@onClose}}>
+    {{#if @title}}
+      <header class="flex items-center justify-between border-b border-gray-400 py-3 px-6 bg-gray-50 rounded-t-lg">
+        <h2>{{@title}}</h2>
+        <button type="button" {{on "click" @onClose}} class="no-focus text-gray-700 hover:text-gray-500 -mr-1">
+          {{svg-jar "x"}}
+        </button>
+      </header>
+    {{/if}}
+    {{yield}}
+  </ModalDialog>
+{{/if}}

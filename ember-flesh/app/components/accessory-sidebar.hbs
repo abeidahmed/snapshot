@@ -8,8 +8,6 @@
     </button>
   </div>
 </div>
-{{#if this.isShowingModal}}
-  <ModalDialog @translucentOverlay={{true}} @onClose={{this.toggleModalVisibility}}>
-    <Snapshot::NewForm />
-  </ModalDialog>
-{{/if}}
+<Modal @onClose={{this.toggleModalVisibility}} @status={{this.isShowingModal}}>
+  <Snapshot::NewForm />
+</Modal>
