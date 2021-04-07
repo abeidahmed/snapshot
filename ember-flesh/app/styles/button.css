@@ -1,0 +1,17 @@
+@layer components {
+  .btn {
+    @apply no-focus block px-3 py-2 text-center text-sm font-medium leading-5 whitespace-nowrap border border-transparent rounded-lg;
+  }
+
+  .btn-primary {
+    @apply text-white bg-rose-500;
+  }
+
+  .btn-primary:hover {
+    @apply text-white bg-rose-400;
+  }
+
+  .btn-primary:active {
+    @apply bg-rose-600;
+  }
+}

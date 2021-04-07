@@ -4,6 +4,7 @@
 @import 'tailwindcss/utilities';
 @import 'ember-modal-dialog/ember-modal-structure.css';
 @import 'ember-modal-dialog/ember-modal-appearance.css';
+@import 'button';
 
 @layer components {
   .ember-modal-overlay .translucent {

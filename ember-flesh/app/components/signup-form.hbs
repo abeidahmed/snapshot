@@ -1,24 +1,24 @@
 <form {{on "submit" this.createUserRecord}}>
   <div>
-    <label for="full_name" class="block text-sm font-medium text-gray-700">Full name</label>
-    <input type="text" {{on "change" this.updateNameField}} id="full_name" required class="block w-full mt-1 text-sm leading-5 shadow-sm form-input rounded-lg border-gray-300">
+    <label for="full_name" class="form-label">Full name</label>
+    <input type="text" {{on "change" this.updateNameField}} id="full_name" required class="form-control">
     <p class="text-sm mt-1 text-red-600 font-medium">{{show-form-error "full_name" errors=this.errors}}</p>
   </div>
   <div class="mt-4">
-    <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
-    <input type="email" {{on "change" this.updateEmailField}} id="email" required class="block w-full mt-1 text-sm leading-5 shadow-sm form-input rounded-lg border-gray-300">
+    <label for="email" class="form-label">Email address</label>
+    <input type="email" {{on "change" this.updateEmailField}} id="email" required class="form-control">
     <p class="text-sm mt-1 text-red-600 font-medium">{{show-form-error "email" errors=this.errors}}</p>
   </div>
   <div class="mt-4">
     <div class="flex items-center">
-      <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+      <label for="password" class="form-label">Password</label>
       <p class="text-sm text-gray-600 ml-1">(min. 6 characters)</p>
     </div>
-    <input type="password" {{on "change" this.updatePasswordField}} id="password" required class="block w-full mt-1 text-sm leading-5 shadow-sm form-input rounded-lg border-gray-300">
+    <input type="password" {{on "change" this.updatePasswordField}} id="password" required class="form-control">
     <p class="text-sm mt-1 text-red-600 font-medium">{{show-form-error "password" errors=this.errors}}</p>
   </div>
   <div class="mt-4">
-    <button type="submit" class="no-focus block w-full px-3 py-2 text-sm font-medium leading-5 text-white whitespace-nowrap bg-indigo-600 border border-transparent rounded-lg hover:bg-indigo-500">
+    <button type="submit" class="btn btn-primary w-full">
       Create an account
     </button>
   </div>
