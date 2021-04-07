@@ -1,0 +1,29 @@
+<form class="p-6">
+  <div>
+    <label for="website_url" class="form-label">Website URL</label>
+    <input type="url" id="website_url" required placeholder="https://mywebsite.com" class="form-control">
+  </div>
+  <div class="mt-4">
+    <div class="flex">
+      <input type="radio" name="visibility" id="public-snapshot" class="mt-1 text-rose-500 focus:ring-rose-500" checked>
+      <div class="ml-2">
+        <label for="public-snapshot" class="inline-block text-sm font-medium text-gray-700">Public snapshot</label>
+        <p class="text-xs text-gray-600">Anyone on the internet can see this snapshot.</p>
+      </div>
+    </div>
+  </div>
+  <div class="mt-4">
+    <div class="flex">
+      <input type="radio" name="visibility" id="private-snapshot" class="mt-1 text-rose-500 focus:ring-rose-500">
+      <div class="ml-2">
+        <label for="private-snapshot" class="inline-block text-sm font-medium text-gray-700">Private snapshot</label>
+        <p class="text-xs text-gray-600">Only you can see this snapshot.</p>
+      </div>
+    </div>
+  </div>
+  <div class="mt-4">
+    <button type="submit" class="no-focus block w-full px-3 py-2 text-sm font-medium leading-5 text-white whitespace-nowrap bg-rose-500 border border-transparent rounded-lg hover:bg-rose-400">
+      Share snapshot
+    </button>
+  </div>
+</form>

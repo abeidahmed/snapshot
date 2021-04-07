@@ -14,6 +14,22 @@
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
       0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
     padding: 0 !important;
+    max-width: 90vw;
+    width: 100%;
+  }
+
+  @screen sm {
+    .ember-modal-dialog {
+      max-width: 28rem;
+    }
+  }
+
+  .form-label {
+    @apply inline-block text-sm font-medium text-gray-700;
+  }
+
+  .form-control {
+    @apply block w-full text-sm border-gray-300 rounded-lg leading-5 mt-1 focus:ring-2 focus:ring-opacity-50 focus:ring-rose-500 focus:border-rose-500;
   }
 }
 
