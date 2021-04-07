@@ -2,6 +2,20 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+@import 'ember-modal-dialog/ember-modal-structure.css';
+@import 'ember-modal-dialog/ember-modal-appearance.css';
+
+@layer components {
+  .ember-modal-overlay .translucent {
+    @apply bg-gray-700 bg-opacity-50;
+  }
+
+  .ember-modal-dialog {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+    padding: 0 !important;
+  }
+}
 
 @layer utilities {
   .no-focus:focus:not([data-focus-visible-added]) {
