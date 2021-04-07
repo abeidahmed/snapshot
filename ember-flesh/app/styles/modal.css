@@ -1,0 +1,19 @@
+@layer components {
+  .ember-modal-overlay .translucent {
+    @apply bg-gray-700 bg-opacity-50;
+  }
+
+  .ember-modal-dialog {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+    padding: 0 !important;
+    max-width: 90vw;
+    width: 100%;
+  }
+
+  @screen sm {
+    .ember-modal-dialog {
+      max-width: 28rem;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@layer components {
+  .form-label {
+    @apply inline-block text-sm font-medium text-gray-700;
+  }
+
+  .form-control {
+    @apply block w-full text-sm border-gray-300 rounded-lg leading-5 mt-1 focus:ring-2 focus:ring-opacity-50 focus:ring-rose-500 focus:border-rose-500;
+  }
+}
