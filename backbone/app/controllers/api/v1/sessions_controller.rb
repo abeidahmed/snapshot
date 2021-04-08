@@ -1,4 +1,6 @@
 class Api::V1::SessionsController < ApplicationController
+  skip_after_action :verify_authorized
+
   def create
     auth = Authentication.new(params)
 

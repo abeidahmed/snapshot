@@ -1,4 +1,6 @@
 class Api::V1::UsersController < ApplicationController
+  skip_after_action :verify_authorized
+
   def create
     user = User.new(user_params)
 
