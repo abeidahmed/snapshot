@@ -5,7 +5,7 @@ class Snapshot < ApplicationRecord
 
   validates :url, presence: true, format: { with: VALID_URL_REGEX }
   validates :image_url, format: { with: VALID_URL_REGEX }, allow_blank: true
-  validates :title, presence: true
+  validates :title, presence: true, on: :update
 
   enum visibility: { universal: "universal", listed: "listed" }
 end

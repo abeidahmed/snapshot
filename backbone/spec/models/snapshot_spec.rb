@@ -26,7 +26,7 @@ RSpec.describe Snapshot, type: :model do
 
     it { is_expected.not_to allow_value("https://goog", "www.hello.com").for(:image_url) }
 
-    it { is_expected.to validate_presence_of(:title) }
+    it { is_expected.to validate_presence_of(:title).on(:update) }
 
     it { is_expected.to define_enum_for(:visibility).with_values(universal: "universal", listed: "listed").backed_by_column_of_type(:string) } # rubocop:disable Layout/LineLength
   end
