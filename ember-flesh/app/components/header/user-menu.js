@@ -8,4 +8,8 @@ export default class HeaderUserMenuComponent extends Component {
   @action toggleMenuVisibility() {
     this.isActive = !this.isActive;
   }
+
+  @action hideMenu() {
+    this.isActive = false;
+  }
 }
