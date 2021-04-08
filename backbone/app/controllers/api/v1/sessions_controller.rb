@@ -1,4 +1,4 @@
-class Api::V1::SessionsController < Api::V1::ApplicationController
+class Api::V1::SessionsController < ApplicationController
   def create
     auth = Authentication.new(params)
 
