@@ -1,10 +1,20 @@
 module Authenticable
   extend ActiveSupport::Concern
 
-  # rubocop:disable Rails/LexicallyScopedActionFilter
   included do
-    after_action :verify_authorized, except: :index
-    after_action :verify_policy_scoped, only: :index
+    before_action :authenticate_token
   end
-  # rubocop:enable Rails/LexicallyScopedActionFilter
+
+  attr_reader :current_user
+
+  def authenticate_token
+    payload = JsonWebToken.decode(auth_token)
+    @current_user = User.find(payload["id"])
+  end
+
+  private
+
+  def auth_token
+    @auth_token ||= request.headers.fetch("Authorization", "").split.last
+  end
 end
