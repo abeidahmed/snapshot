@@ -18,9 +18,9 @@ ActiveRecord::Schema.define(version: 2021_04_08_133127) do
 
   create_table "snapshots", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "url", default: "", null: false
-    t.string "title"
+    t.string "title", default: "", null: false
     t.text "description"
-    t.string "image"
+    t.string "image_url"
     t.string "visibility", default: "universal", null: false
     t.uuid "user_id", null: false
     t.datetime "created_at", precision: 6, null: false

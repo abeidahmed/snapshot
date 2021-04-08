@@ -3,7 +3,7 @@ FactoryBot.define do
     url { "https://google.com" }
     title { "Website title" }
     description { "MyText" }
-    image { "https://image.com" }
+    image_url { "https://image.com" }
     visibility { "universal" }
     user
 
