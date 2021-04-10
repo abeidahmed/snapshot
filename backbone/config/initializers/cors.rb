@@ -5,9 +5,11 @@
 
 # Read more: https://github.com/cyu/rack-cors
 
+allowed_origin = Rails.env.production? ? "https://snapshots.app" : "http://localhost:3000"
+
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins "http://localhost:3000"
+    origins allowed_origin
 
     resource "*", headers: :any, methods: %i[get post put patch delete options head]
   end
