@@ -1,5 +1,6 @@
 import React from "react";
 import { AppProps } from "next/app";
+import "styles/fonts.scss";
 import "styles/index.scss";
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
