@@ -29,10 +29,7 @@ const Login: React.FC = () => {
             <div>
               <h3 className="text-gray-700 text-sm">New to our platform?</h3>
               <div className="mt-4">
-                <a
-                  href="/"
-                  className="no-focus block w-full text-center px-3 py-2 text-sm leading-5 font-medium text-gray-700 shadow-sm whitespace-nowrap bg-white border border-gray-300 rounded-lg hover:text-gray-500"
-                >
+                <a href="/" className="btn btn-default w-full">
                   Create an account
                 </a>
               </div>
