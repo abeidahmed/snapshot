@@ -1,4 +1,5 @@
 import React from "react";
+import HeaderDropdownMenu from "./HeaderDropdownMenu";
 import Icon from "./Icons";
 
 const Header: React.FC = () => {
@@ -24,7 +25,9 @@ const Header: React.FC = () => {
           <Icon icon="search" className="text-gray-400 w-5 h-5" />
         </div>
       </div>
-      <div className="flex-shrink-0 sm:hidden">Usermenu</div>
+      <div className="flex-shrink-0 sm:hidden">
+        <HeaderDropdownMenu />
+      </div>
     </header>
   );
 };

@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "core/components/Header";
 import Sidebar from "core/components/Sidebar";
+import HeaderDropdownMenu from "core/components/HeaderDropdownMenu";
 
 const Home: React.FC = () => {
   return (
@@ -16,7 +17,7 @@ const Home: React.FC = () => {
             <button type="button" className="btn btn-primary">
               Share snapshot
             </button>
-            Usermenu
+            <HeaderDropdownMenu />
           </div>
         </div>
       </main>
