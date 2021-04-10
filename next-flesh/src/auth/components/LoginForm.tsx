@@ -4,18 +4,8 @@ import { useMutation } from "react-query";
 import { signinValidations } from "auth/validations";
 import { loginMutation } from "auth/mutations/login";
 
-interface ServerErrors {
-  response: {
-    data: {
-      errors: {
-        invalid: string;
-      };
-    };
-  };
-}
-
 const LoginForm: React.FC = () => {
-  const [formError, setFormError] = useState("");
+  const [formError, setFormError] = useState<string>("");
   const { mutateAsync } = useMutation(loginMutation);
 
   return (
@@ -23,11 +13,12 @@ const LoginForm: React.FC = () => {
       initialValues={{ email: "", password: "" }}
       onSubmit={async (values, { setSubmitting }) => {
         setSubmitting(true);
+        setFormError("");
         try {
           const res = await mutateAsync(values);
           console.log(res);
         } catch (error) {
-          console.log((error as ServerErrors).response.data.errors.invalid);
+          setFormError("Invalid email or password");
         } finally {
           setSubmitting(false);
         }
@@ -73,7 +64,9 @@ const LoginForm: React.FC = () => {
               className="text-sm mt-1 text-red-600 font-medium"
             />
           </div>
-          {formError}
+          {formError && (
+            <p className="text-sm mt-1 text-red-600 font-medium">{formError}</p>
+          )}
           <div className="mt-4">
             <button
               type="submit"
