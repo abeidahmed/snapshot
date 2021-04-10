@@ -23,10 +23,7 @@ const Login: React.FC = () => {
             <div className="mt-4">
               <p className="text-sm text-gray-600">
                 By signing in you agree to our{" "}
-                <a
-                  href="/"
-                  className="font-medium underline transition duration-150 ease-in-out hover:text-gray-500"
-                >
+                <a href="/" className="font-medium underline link-secondary">
                   terms and conditions
                 </a>
                 .

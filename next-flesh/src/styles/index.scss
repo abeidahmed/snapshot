@@ -8,4 +8,20 @@
   .no-focus:focus:not([data-focus-visible-added]) {
     outline: none;
   }
+
+  .link-primary {
+    @apply text-sm text-rose-600 transition duration-150 ease-in-out;
+
+    &:hover {
+      @apply text-rose-500;
+    }
+  }
+
+  .link-secondary {
+    @apply text-gray-600 transition duration-150 ease-in-out;
+
+    &:hover {
+      @apply text-gray-500;
+    }
+  }
 }

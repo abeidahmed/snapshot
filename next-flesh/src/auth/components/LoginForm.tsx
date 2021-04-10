@@ -14,10 +14,7 @@ const LoginForm: React.FC = () => {
           <label htmlFor="password" className="form-label">
             Password
           </label>
-          <a
-            href="/"
-            className="text-sm text-rose-600 transition duration-150 ease-in-out hover:text-rose-500"
-          >
+          <a href="/" className="link-primary">
             Forgot password?
           </a>
         </div>
