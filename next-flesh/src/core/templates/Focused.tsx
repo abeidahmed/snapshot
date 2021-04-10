@@ -1,11 +1,11 @@
 import Icon from "core/components/Icons";
 import React from "react";
 
-type FocusedProps = {
+interface FocusedProps {
   title: string;
   container?: boolean;
   children: React.ReactNode;
-};
+}
 
 const Focused: React.FC<FocusedProps> = ({
   title,

@@ -1,8 +1,8 @@
 import React from "react";
 
-type GlyphProps = {
+interface GlyphProps {
   icon: string;
-};
+}
 
 const Glyph: React.FC<GlyphProps> = ({ icon }) => {
   switch (icon) {
@@ -19,7 +19,7 @@ const Glyph: React.FC<GlyphProps> = ({ icon }) => {
   }
 };
 
-type IconProps = {
+interface IconProps {
   icon: string;
   className?: string;
   fill?: string;
@@ -27,7 +27,7 @@ type IconProps = {
   width?: number;
   "aria-label"?: string;
   viewBox?: string;
-};
+}
 
 const Icon: React.FC<IconProps> = ({
   icon,
