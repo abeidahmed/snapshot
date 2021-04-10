@@ -1,9 +1,10 @@
 import React from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form } from "formik";
 import { useMutation } from "react-query";
 import { signupValidations } from "auth/validations";
 import { signupMutation } from "auth/mutations/signup";
 import { displayFormErrors } from "core/utils/displayFormErrors";
+import LabeledTextField from "core/components/LabeledTextField";
 
 const SignupForm: React.FC = () => {
   const { mutateAsync } = useMutation(signupMutation);
@@ -25,47 +26,11 @@ const SignupForm: React.FC = () => {
       validationSchema={signupValidations}
     >
       {({ isSubmitting }) => (
-        <Form>
+        <Form className="space-y-4">
+          <LabeledTextField name="full_name" label="Full name" />
+          <LabeledTextField name="email" type="email" label="Email address" />
+          <LabeledTextField name="password" type="password" label="Password" />
           <div>
-            <label htmlFor="full_name" className="form-label">
-              Full name
-            </label>
-            <Field
-              type="text"
-              id="full_name"
-              name="full_name"
-              className="form-control"
-            />
-            <ErrorMessage name="full_name" component="p" />
-          </div>
-          <div className="mt-4">
-            <label htmlFor="email" className="form-label">
-              Email address
-            </label>
-            <Field
-              type="email"
-              id="email"
-              name="email"
-              className="form-control"
-            />
-            <ErrorMessage name="email" component="p" />
-          </div>
-          <div className="mt-4">
-            <div className="flex items-center">
-              <label htmlFor="password" className="form-label">
-                Password
-              </label>
-              <p className="text-sm text-gray-600 ml-1">(min. 6 characters)</p>
-            </div>
-            <Field
-              type="password"
-              id="password"
-              name="password"
-              className="form-control"
-            />
-            <ErrorMessage name="password" component="p" />
-          </div>
-          <div className="mt-4">
             <button
               type="submit"
               disabled={isSubmitting}

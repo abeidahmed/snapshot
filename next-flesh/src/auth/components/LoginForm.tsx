@@ -3,6 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useMutation } from "react-query";
 import { signinValidations } from "auth/validations";
 import { loginMutation } from "auth/mutations/login";
+import LabeledTextField from "core/components/LabeledTextField";
 
 const LoginForm: React.FC = () => {
   const [formError, setFormError] = useState<string>("");
@@ -27,22 +28,7 @@ const LoginForm: React.FC = () => {
     >
       {({ isSubmitting }) => (
         <Form>
-          <div>
-            <label htmlFor="email" className="form-label">
-              Email address
-            </label>
-            <Field
-              id="email"
-              type="email"
-              name="email"
-              className="form-control"
-            />
-            <ErrorMessage
-              name="email"
-              component="p"
-              className="text-sm mt-1 text-red-600 font-medium"
-            />
-          </div>
+          <LabeledTextField name="email" label="Email address" />
           <div className="mt-4">
             <div className="flex items-center justify-between">
               <label htmlFor="password" className="form-label">
