@@ -46,3 +46,37 @@ ember-flesh/yarn-error.log
 ember-flesh/.node_modules.ember-try/
 ember-flesh/bower.json.ember-try
 ember-flesh/package.json.ember-try
+
+# Next app
+# dependencies
+next-flesh/node_modules
+next-flesh/.pnp
+next-flesh/.pnp.js
+
+# testing
+next-flesh/coverage
+
+# next.js
+next-flesh/.next/
+next-flesh/out/
+
+# production
+next-flesh/build
+
+# misc
+next-flesh/.DS_Store
+next-flesh/*.pem
+
+# debug
+next-flesh/npm-debug.log*
+next-flesh/yarn-debug.log*
+next-flesh/yarn-error.log*
+
+# local env files
+next-flesh/.env.local
+next-flesh/.env.development.local
+next-flesh/.env.test.local
+next-flesh/.env.production.local
+
+# vercel
+next-flesh/.vercel
