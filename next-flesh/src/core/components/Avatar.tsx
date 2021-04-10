@@ -1,11 +1,17 @@
 interface AvatarProps {
   alt: string;
   src?: string;
-  size?: number;
+  size?: "md" | "lg";
 }
 
-const Avatar: React.FC<AvatarProps> = ({ alt, src, size = 9 }) => {
-  const avatarSize = `w-${size} h-${size}`;
+const Avatar: React.FC<AvatarProps> = ({ alt, src, size = "md" }) => {
+  let avatarSize;
+
+  if (size === "md") {
+    avatarSize = "w-9 h-9";
+  } else if (size === "lg") {
+    avatarSize = "w-12 h-12";
+  }
   const avatarClasses = `${avatarSize} rounded-full flex-shrink-0`;
 
   if (src) {

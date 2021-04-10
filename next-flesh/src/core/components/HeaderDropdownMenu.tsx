@@ -24,7 +24,7 @@ const HeaderDropdownMenu: React.FC = () => {
             <li>
               <a href="/" className="block py-2 px-3 hover:bg-gray-100">
                 <div className="flex items-center space-x-3">
-                  <Avatar size={10} alt="Abeid Ahmed" />
+                  <Avatar size="lg" alt="Abeid Ahmed" />
                   <div className="flex-1">
                     <span className="block font-medium">Abeid Ahmed</span>
                     <span className="block text-gray-500">@abeidahmed</span>

@@ -14,6 +14,9 @@ module.exports = {
       colors: {
         rose: colors.rose,
       },
+      spacing: {
+        image: "42%",
+      },
     },
   },
   variants: {

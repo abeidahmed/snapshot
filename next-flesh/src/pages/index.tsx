@@ -1,6 +1,7 @@
 import Header from "core/components/Header";
 import Sidebar from "core/components/Sidebar";
 import HeaderDropdownMenu from "core/components/HeaderDropdownMenu";
+import Snapshot from "snapshot/components/Snapshot";
 
 const Home: React.FC = () => {
   return (
@@ -9,7 +10,10 @@ const Home: React.FC = () => {
       <main className="md:grid grid-cols-12 flex-1 min-h-screen">
         <div className="col-span-7 border-r">
           <Header />
-          <section className="space-y-3 bg-gray-100"></section>
+          <section className="space-y-2 bg-gray-100">
+            <Snapshot />
+            <Snapshot />
+          </section>
         </div>
         <div className="col-span-5 pl-6 pr-4 hidden lg:block">
           <div className="py-4 flex items-center justify-end sticky top-0 space-x-5">
