@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Icon from "./Icons";
+import Avatar from "./Avatar";
 
 const Sidebar: React.FC = () => {
   const links = [
@@ -27,11 +28,7 @@ const Sidebar: React.FC = () => {
       <aside className="w-72 sm:w-auto sm:block sm:py-4 lg:w-72 fixed sm:sticky sm:top-0 bg-white z-40 border-r h-screen">
         <header className="flex items-center justify-between px-4 border-b sm:border-0 py-4 sm:py-0">
           <button type="button" className="no-focus hidden sm:block lg:hidden">
-            <img
-              className="h-9 w-9 rounded-full"
-              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-              alt="abeid ahmed"
-            />
+            <Avatar alt="Abeid Ahmed" />
           </button>
           <Link href="/">
             <a className="inline-block text-gray-700 hover:text-gray-900 sm:hidden lg:block">

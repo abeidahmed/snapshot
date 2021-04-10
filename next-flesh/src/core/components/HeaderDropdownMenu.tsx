@@ -1,4 +1,5 @@
 import React from "react";
+import Avatar from "./Avatar";
 import Icon from "./Icons";
 import Toggler from "./Toggler";
 
@@ -13,11 +14,7 @@ const HeaderDropdownMenu: React.FC = () => {
               className="no-focus"
               onClick={() => setIsActive(!isActive)}
             >
-              <img
-                className="h-9 w-9 rounded-full"
-                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                alt="abeid ahmed"
-              />
+              <Avatar alt="Abeid Ahmed" />
             </button>
           </div>
           <ul
@@ -28,11 +25,7 @@ const HeaderDropdownMenu: React.FC = () => {
             <li>
               <a href="/" className="block py-2 px-3 hover:bg-gray-100">
                 <div className="flex items-center space-x-3">
-                  <img
-                    className="h-10 w-10 rounded-full flex-shrink-0"
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    alt="abeid ahmed"
-                  />
+                  <Avatar size={10} alt="Abeid Ahmed" />
                   <div className="flex-1">
                     <span className="block font-medium">Abeid Ahmed</span>
                     <span className="block text-gray-500">@abeidahmed</span>
