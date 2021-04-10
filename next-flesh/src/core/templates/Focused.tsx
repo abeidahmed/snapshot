@@ -1,5 +1,4 @@
 import Icon from "core/components/Icons";
-import React from "react";
 
 interface FocusedProps {
   title: string;

@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "core/components/Header";
 import Sidebar from "core/components/Sidebar";
 import HeaderDropdownMenu from "core/components/HeaderDropdownMenu";

@@ -1,4 +1,3 @@
-import React from "react";
 import Avatar from "./Avatar";
 import Icon from "./Icons";
 import Toggler from "./Toggler";

@@ -1,4 +1,3 @@
-import React from "react";
 import HeaderDropdownMenu from "./HeaderDropdownMenu";
 import Icon from "./Icons";
 

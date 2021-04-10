@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 import SignupForm from "auth/components/SignupForm";
 import Focused from "core/templates/Focused";

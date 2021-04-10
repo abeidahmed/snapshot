@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 import LoginForm from "auth/components/LoginForm";
 import Focused from "core/templates/Focused";
