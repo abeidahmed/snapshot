@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import SignupForm from "auth/components/SignupForm";
 
 const Signup: React.FC = () => {
@@ -31,9 +32,9 @@ const Signup: React.FC = () => {
                 Already have an account?
               </h3>
               <div className="mt-4">
-                <a href="/" className="btn btn-default w-full">
-                  Sign in
-                </a>
+                <Link href="/login">
+                  <a className="btn btn-default w-full">Sign in</a>
+                </Link>
               </div>
             </div>
           </div>
