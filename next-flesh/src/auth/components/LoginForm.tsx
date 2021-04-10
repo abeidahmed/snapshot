@@ -21,7 +21,11 @@ const LoginForm: React.FC = () => {
               name="email"
               className="form-control"
             />
-            <ErrorMessage name="email" />
+            <ErrorMessage
+              name="email"
+              component="p"
+              className="text-sm mt-1 text-red-600 font-medium"
+            />
           </div>
           <div className="mt-4">
             <div className="flex items-center justify-between">
@@ -38,7 +42,11 @@ const LoginForm: React.FC = () => {
               name="password"
               className="form-control"
             />
-            <ErrorMessage name="password" />
+            <ErrorMessage
+              name="password"
+              component="p"
+              className="text-sm mt-1 text-red-600 font-medium"
+            />
           </div>
           <div className="mt-4">
             <button
