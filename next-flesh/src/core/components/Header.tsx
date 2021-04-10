@@ -1,4 +1,5 @@
 import React from "react";
+import Icon from "./Icons";
 
 const Header: React.FC = () => {
   return (
@@ -20,7 +21,7 @@ const Header: React.FC = () => {
           className="block w-full border-gray-200 rounded-lg leading-5 pl-10 bg-gray-100 focus:bg-white focus:ring-2 focus:ring-opacity-50 focus:ring-rose-500 focus:border-rose-500"
         />
         <div className="absolute inset-0 left-0 flex items-center pointer-events-none pl-3">
-          Search
+          <Icon icon="search" className="text-gray-400 w-5 h-5" />
         </div>
       </div>
       <div className="flex-shrink-0 sm:hidden">Usermenu</div>
