@@ -3,10 +3,15 @@ import React from "react";
 
 type FocusedProps = {
   title: string;
+  container?: boolean;
   children: React.ReactNode;
 };
 
-const Focused: React.FC<FocusedProps> = ({ title, children }) => {
+const Focused: React.FC<FocusedProps> = ({
+  title,
+  container = true,
+  children,
+}) => {
   return (
     <main className="flex items-center justify-center min-h-screen py-12 bg-gray-100 sm:px-6 lg:px-8">
       <div className="w-full">
@@ -20,7 +25,15 @@ const Focused: React.FC<FocusedProps> = ({ title, children }) => {
             {title}
           </h1>
         </div>
-        <div className="w-full sm:max-w-md mx-auto">{children}</div>
+        <div className="w-full sm:max-w-md mx-auto">
+          {container ? (
+            <div className="px-10 py-8 mt-8 bg-white shadow sm:rounded-md">
+              {children}
+            </div>
+          ) : (
+            children
+          )}
+        </div>
       </div>
     </main>
   );
