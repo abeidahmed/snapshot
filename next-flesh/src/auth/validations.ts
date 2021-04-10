@@ -9,6 +9,6 @@ export const signinValidations = yup.object().shape({
 
 export const signupValidations = yup.object().shape({
   email,
-  password: yup.string().min(6).max(72).required(),
+  password: yup.string().max(72).required(),
   full_name: yup.string().max(255).required(),
 });

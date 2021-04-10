@@ -3,6 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useMutation } from "react-query";
 import { signupValidations } from "auth/validations";
 import { signupMutation } from "auth/mutations/signup";
+import { displayFormErrors } from "core/utils/displayFormErrors";
 
 const SignupForm: React.FC = () => {
   const { mutateAsync } = useMutation(signupMutation);
@@ -10,13 +11,13 @@ const SignupForm: React.FC = () => {
   return (
     <Formik
       initialValues={{ full_name: "", email: "", password: "" }}
-      onSubmit={async (values, { setSubmitting }) => {
+      onSubmit={async (values, { setSubmitting, setFieldError }) => {
         setSubmitting(true);
         try {
           const res = await mutateAsync(values);
           console.log(res);
         } catch (error) {
-          console.log(error.response.data.errors);
+          displayFormErrors(error.response.data.errors, setFieldError);
         } finally {
           setSubmitting(false);
         }
