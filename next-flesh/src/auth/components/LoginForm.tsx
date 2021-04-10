@@ -1,12 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import { useMutation } from "react-query";
 import { signinValidations } from "auth/validations";
+import { loginMutation } from "auth/mutations/login";
+
+interface ServerErrors {
+  response: {
+    data: {
+      errors: {
+        invalid: string;
+      };
+    };
+  };
+}
 
 const LoginForm: React.FC = () => {
+  const [formError, setFormError] = useState("");
+  const { mutateAsync } = useMutation(loginMutation);
+
   return (
     <Formik
       initialValues={{ email: "", password: "" }}
-      onSubmit={(values) => console.log(values)}
+      onSubmit={async (values, { setSubmitting }) => {
+        setSubmitting(true);
+        try {
+          const res = await mutateAsync(values);
+          console.log(res);
+        } catch (error) {
+          console.log((error as ServerErrors).response.data.errors.invalid);
+        } finally {
+          setSubmitting(false);
+        }
+      }}
       validationSchema={signinValidations}
     >
       {({ isSubmitting }) => (
@@ -48,6 +73,7 @@ const LoginForm: React.FC = () => {
               className="text-sm mt-1 text-red-600 font-medium"
             />
           </div>
+          {formError}
           <div className="mt-4">
             <button
               type="submit"
