@@ -6,4 +6,8 @@
   .form-control {
     @apply block w-full text-sm border-gray-300 rounded-lg leading-5 mt-1 focus:ring-2 focus:ring-opacity-50 focus:ring-rose-500 focus:border-rose-500;
   }
+
+  .form-error {
+    @apply text-sm mt-1 text-red-600 font-medium;
+  }
 }

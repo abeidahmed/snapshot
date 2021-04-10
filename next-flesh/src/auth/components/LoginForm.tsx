@@ -50,9 +50,7 @@ const LoginForm: React.FC = () => {
               className="text-sm mt-1 text-red-600 font-medium"
             />
           </div>
-          {formError && (
-            <p className="text-sm mt-1 text-red-600 font-medium">{formError}</p>
-          )}
+          {formError && <p className="form-error">{formError}</p>}
           <div className="mt-4">
             <button
               type="submit"

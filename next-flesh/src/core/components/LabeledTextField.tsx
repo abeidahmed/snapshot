@@ -29,11 +29,7 @@ const LabeledTextField: React.FC<LabeledTextFieldProps> = ({
         className="form-control"
         {...props}
       />
-      <ErrorMessage
-        name={name}
-        component="p"
-        className="text-sm mt-1 text-red-600 font-medium"
-      />
+      <ErrorMessage name={name} component="p" className="form-error" />
     </div>
   );
 };
