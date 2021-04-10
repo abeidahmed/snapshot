@@ -1,36 +1,57 @@
 import React from "react";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import { signinValidations } from "auth/validations";
 
 const LoginForm: React.FC = () => {
   return (
-    <form>
-      <div>
-        <label htmlFor="email" className="form-label">
-          Email address
-        </label>
-        <input type="email" id="email" required className="form-control" />
-      </div>
-      <div className="mt-4">
-        <div className="flex items-center justify-between">
-          <label htmlFor="password" className="form-label">
-            Password
-          </label>
-          <a href="/" className="link-primary">
-            Forgot password?
-          </a>
-        </div>
-        <input
-          type="password"
-          id="password"
-          required
-          className="form-control"
-        />
-      </div>
-      <div className="mt-4">
-        <button type="submit" className="btn btn-primary w-full">
-          Sign in
-        </button>
-      </div>
-    </form>
+    <Formik
+      initialValues={{ email: "", password: "" }}
+      onSubmit={(values) => console.log(values)}
+      validationSchema={signinValidations}
+    >
+      {({ isSubmitting }) => (
+        <Form>
+          <div>
+            <label htmlFor="email" className="form-label">
+              Email address
+            </label>
+            <Field
+              id="email"
+              type="email"
+              name="email"
+              className="form-control"
+            />
+            <ErrorMessage name="email" />
+          </div>
+          <div className="mt-4">
+            <div className="flex items-center justify-between">
+              <label htmlFor="password" className="form-label">
+                Password
+              </label>
+              <a href="/" className="link-primary">
+                Forgot password?
+              </a>
+            </div>
+            <Field
+              id="password"
+              type="password"
+              name="password"
+              className="form-control"
+            />
+            <ErrorMessage name="password" />
+          </div>
+          <div className="mt-4">
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="btn btn-primary w-full"
+            >
+              Sign in
+            </button>
+          </div>
+        </Form>
+      )}
+    </Formik>
   );
 };
 
