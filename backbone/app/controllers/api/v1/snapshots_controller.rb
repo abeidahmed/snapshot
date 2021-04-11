@@ -13,6 +13,6 @@ class Api::V1::SnapshotsController < ApplicationController
   private
 
   def snapshot_new_params
-    params.require(:snapshot).permit(:url, :visibility)
+    params.require(:snapshot).permit(:url, :visibility, tag_names: [])
   end
 end

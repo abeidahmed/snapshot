@@ -1,6 +1,7 @@
 class Snapshot < ApplicationRecord
+  include Tagging
+
   belongs_to :user
-  has_many :tags, as: :taggable, dependent: :destroy
 
   VALID_URL_REGEX = /\A(http|https):\/\/[a-z0-9]+([\-.]{1}[a-z0-9]+)*\.[a-z]{2,5}(([0-9]{1,5})?\/.*)?$\z/ix
 
