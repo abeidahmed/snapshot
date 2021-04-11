@@ -46,7 +46,7 @@ const Modal: React.FC<ModalProps> = ({ title, trigger, children }) => {
             shouldFocusAfterRender
             style={customStyles}
             isOpen={isActive}
-            ariaHideApp={true}
+            ariaHideApp={false}
             onRequestClose={() => setIsActive(false)}
           >
             {title && (
