@@ -6,7 +6,7 @@ import { snapshotNewValidations } from "snapshot/validations";
 const SnapshotNewForm: React.FC = () => {
   return (
     <Formik
-      initialValues={{ website_url: "", visibility: "" }}
+      initialValues={{ website_url: "", visibility: "universal" }}
       onSubmit={(values) => console.log(values)}
       validationSchema={snapshotNewValidations}
     >
