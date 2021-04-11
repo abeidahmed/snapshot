@@ -1,6 +1,12 @@
 require "rails_helper"
 
 RSpec.describe Tag, type: :model do
+  subject(:tag) { build(:tag) }
+
+  describe "associations" do
+    it { is_expected.to belong_to(:taggable) }
+  end
+
   describe "validations" do
     it { is_expected.to validate_presence_of(:name) }
 
