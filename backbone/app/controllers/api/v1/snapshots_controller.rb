@@ -4,7 +4,7 @@ class Api::V1::SnapshotsController < ApplicationController
 
     snapshot = current_user.snapshots.build(snapshot_new_params)
     if snapshot.save
-      # do
+      render json: snapshot, status: :created
     else
       render json: { errors: snapshot.errors }, status: :unprocessable_entity
     end

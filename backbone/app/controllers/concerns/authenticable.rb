@@ -10,6 +10,8 @@ module Authenticable
   def authenticate_token
     payload = JsonWebToken.decode(auth_token)
     @current_user = User.find(payload["id"])
+  rescue JWT::DecodeError
+    render json: { errors: { token: ["is invalid"] } }, status: :unprocessable_entity
   end
 
   private
