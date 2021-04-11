@@ -4,7 +4,7 @@ import Avatar from "core/components/Avatar";
 const Snapshot: React.FC = () => {
   return (
     <article className="bg-white border-b border-t first:border-t-0">
-      <div className="relative pb-image">
+      <div className="relative pb-[42%]">
         <img
           className="h-full w-full absolute object-cover bg-center bg-no-repeat"
           src="https://images.unsplash.com/photo-1502945015378-0e284ca1a5be?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80"
