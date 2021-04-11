@@ -17,11 +17,11 @@ RSpec.describe "Api::V1::Snapshots", type: :request do
         user = create(:user)
         post \
           api_v1_snapshots_path,
-          params: { snapshot: { url: "https://google.com", tag_names: %w[foo foo bar] } }.to_json,
+          params: { snapshot: { url: "https://google.com", tag_names: %w[foo foo bar Bar] } }.to_json,
           headers: auth_header(user)
 
-        expect(Tag.all.map(&:name)).to match_array(%w[foo bar])
-        expect(Snapshot.first.tags.map(&:name)).to match_array(%w[foo bar])
+        expect(Tag.all.map(&:name)).to match_array(%w[foo bar Bar])
+        expect(Snapshot.first.tags.map(&:name)).to match_array(%w[foo bar Bar])
       end
     end
 
