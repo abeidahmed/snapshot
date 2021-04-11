@@ -2,6 +2,8 @@ import Header from "core/components/Header";
 import Sidebar from "core/components/Sidebar";
 import HeaderDropdownMenu from "core/components/HeaderDropdownMenu";
 import Snapshot from "snapshot/components/Snapshot";
+import SnapshotNewForm from "snapshot/components/SnapshotNewForm";
+import Modal from "core/components/Modal";
 
 const Home: React.FC = () => {
   return (
@@ -17,9 +19,20 @@ const Home: React.FC = () => {
         </div>
         <div className="col-span-5 pl-6 pr-4 hidden lg:block">
           <div className="py-4 flex items-center justify-end sticky top-0 space-x-5">
-            <button type="button" className="btn btn-primary">
-              Share snapshot
-            </button>
+            <Modal
+              title="Share your snapshot"
+              trigger={(setIsActive) => (
+                <button
+                  type="button"
+                  className="btn btn-primary"
+                  onClick={() => setIsActive(true)}
+                >
+                  Share snapshot
+                </button>
+              )}
+            >
+              {() => <SnapshotNewForm />}
+            </Modal>
             <HeaderDropdownMenu />
           </div>
         </div>
