@@ -1,6 +1,6 @@
 import { ErrorMessage, Field } from "formik";
 
-interface LabeledTextFieldProps {
+interface LabeledTextFieldProps extends React.HTMLProps<HTMLInputElement> {
   type?: string;
   name: string;
   label?: string;
