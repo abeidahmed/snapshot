@@ -12,7 +12,6 @@ const customStyles = {
     left: "50%",
     right: "auto",
     bottom: "auto",
-    marginRight: "-50%",
     borderRadius: 8,
     padding: 0,
     transform: "translateX(-50%)",
