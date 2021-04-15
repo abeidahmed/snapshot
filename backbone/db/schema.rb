@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_11_083837) do
+ActiveRecord::Schema.define(version: 2021_04_08_133127) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -27,16 +27,6 @@ ActiveRecord::Schema.define(version: 2021_04_11_083837) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_snapshots_on_user_id"
     t.index ["visibility"], name: "index_snapshots_on_visibility"
-  end
-
-  create_table "tags", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.string "taggable_type", null: false
-    t.uuid "taggable_id", null: false
-    t.string "name", default: "", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["name"], name: "index_tags_on_name", unique: true
-    t.index ["taggable_type", "taggable_id"], name: "index_tags_on_taggable"
   end
 
   create_table "users", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
